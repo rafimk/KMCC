@@ -14,7 +14,7 @@ internal sealed class ExceptionMiddleware : IMiddleware
         {
             await next(context);
         }
-        catch (PackItException ex)
+        catch (MMSException ex)
         {
             context.Response.StatusCode = 400;
             context.Response.Headers.Add("content-type", "application/json");

@@ -1,6 +1,6 @@
 using MMS.Shared.Abstractions.Exceptions;
 
-namespace PackIT.Domain.Exceptions;
+namespace MMS.Domain.Exceptions;
 
 public class EmptyGenericIdException : MMSException
 {

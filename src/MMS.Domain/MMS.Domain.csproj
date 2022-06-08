@@ -8,4 +8,11 @@
     <ProjectReference Include="..\MMS.Shared.Abstractions\MMS.Shared.Abstractions.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Entities\Members" />
+    <Folder Include="Policies\Members" />
+    <Folder Include="Policies\Users" />
+    <Folder Include="Repositories" />
+  </ItemGroup>
+
 </Project>
