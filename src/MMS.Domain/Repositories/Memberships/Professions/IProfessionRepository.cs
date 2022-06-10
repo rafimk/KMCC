@@ -1,5 +1,6 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using MMS.Domain.Entities;
+using MMS.Domain.Entities.Memberships.Professions;
 using MMS.Domain.ValueObjects;
 
 namespace MMS.Domain.Repositories.Nationalities;

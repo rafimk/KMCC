@@ -1,4 +1,5 @@
 ﻿using System;
+using MMS.Domain.Consts;
 using MMS.Domain.ValueObjects;
 
 namespace MMS.Domain.Entities.Nationalities;

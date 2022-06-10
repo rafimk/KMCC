@@ -1,9 +1,13 @@
 using System;
+using MMD.Domain.ValueObjects;
 using MMS.Domain.Consts;
+using MMS.Domain.Entities.Memberships.Professions;
+using MMS.Domain.Entities.Memberships.Qualifications;
+using MMS.Domain.Entities.Nationalities;
 using MMS.Domain.Exceptions;
 using MMS.Domain.ValueObjects;
 
-namespace MMS.Domain.Entities.Users;
+namespace MMS.Domain.Entities.Memberships;
 
 public class Membership
 {

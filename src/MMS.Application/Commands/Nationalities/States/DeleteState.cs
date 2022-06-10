@@ -3,7 +3,7 @@ using MMS.Shared.Abstractions.Commands;
 
 namespace MMS.Application.Commands;
 
-public record CreateArea() : ICommand
+public record DeleteState() : ICommand
 {
-    public string Name{ get; set; }
+    public Guid Id { get; set;}
 }

@@ -1,7 +1,8 @@
 using System;
+using MMD.Domain.ValueObjects;
 using MMS.Domain.ValueObjects;
 
-namespace MMS.Domain.Entities.Nationalities;
+namespace MMS.Domain.Entities.Memberships;
 
 public class MembershipPeriod 
 {
@@ -12,7 +13,7 @@ public class MembershipPeriod
     public bool IsActive { get; private set; }
     public DateTime CreatedAt { get; private set; }
 
-    private MembershipPeriod(GenericId id, Date start, Date end, Date RegistrationUntil, 
+    private MembershipPeriod(GenericId id, Date start, Date end, Date registrationUntil, 
         bool isActive, DateTime createdAt)
     {
         Id = id;
@@ -27,7 +28,7 @@ public class MembershipPeriod
     {
     }
 
-    public void Create(GenericId id, Date start, Date end, Date RegistrationUntil, bool isActive, DateTime createdAt)
+    public void Create(GenericId id, Date start, Date end, Date registrationUntil, bool isActive, DateTime createdAt)
     {
         Id = id;
         Start = start;
@@ -37,14 +38,14 @@ public class MembershipPeriod
         CreatedAt = createdAt;
     }
     
-    public void Update(Date start, Date end, Date RegistrationUntil)
+    public void Update(Date start, Date end, Date registrationUntil)
     {
         Start = start;
         End = end;
         RegistrationUntil = registrationUntil;
     }
     
-    public void  InActive()
+    public void InActive()
     {
         IsActive = false;
     }

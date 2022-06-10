@@ -1,7 +1,7 @@
 using System;
 using MMS.Domain.ValueObjects;
 
-namespace MMS.Domain.Entities.Nationalities;
+namespace MMS.Domain.Entities.Memberships.Professions;
 
 public class Profession 
 {
@@ -22,12 +22,19 @@ public class Profession
     {
     }
     
-    public void  Profession(ProfessionName name)
+    public void Create(GenericId id, ProfessionName name, DateTime createdAt)
+    {
+        Id = id;
+        Name = name;
+        IsDeleted = false;
+        CreatedAt = createdAt;
+    }
+    public void Update(ProfessionName name)
     {
         Name = name;
     }
     
-    public void  Delete()
+    public void Delete()
     {
         IsDeleted = true;
     }
