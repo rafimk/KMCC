@@ -8,9 +8,8 @@ namespace MMS.Domain.Repositories.Nationalities;
 
 public interface IStateRepository
 {
-    Task<State> GetAsync(GenericId id);
-    Task<IEnumerable<State>> GetAllAsync();
+    Task<State> GetByIdAsync(GenericId id);
+    Task<IEnumerable<State>> GetAsync();
     Task AddAsync(State state);
     Task UpdateAsync(State state);
-    Task DeleteAsync(GenericId id);
 }

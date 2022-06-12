@@ -1,8 +1,8 @@
-using System;
-using MMS.Application.DTO;
+using System.Collections.Generic;
+using MMS.Application.DTO.Memberships.Qualifications;
 using MMS.Shared.Abstractions.Queries;
 
-namespace MMS.Application.Memberships.Qualifications;
+namespace MMS.Application.Queries.Memberships.Qualifications;
 
 public class GetAllQualifications : IQuery<IEnumerable<QualificationDto>>
 {

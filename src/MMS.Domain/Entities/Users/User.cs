@@ -1,5 +1,6 @@
 ﻿using System;
 using MMS.Domain.Consts;
+using MMS.Domain.Contracts.Users;
 using MMS.Domain.Exceptions;
 using MMS.Domain.ValueObjects;
 
@@ -18,44 +19,45 @@ public class User
     public bool IsActive {get; private set;}
     public DateTime? VerifiedAt { get; private set; }
 
-    private User()
+    public User()
     {
     }
 
-    private User(GenericId id, FullName fullName, Email email, MobileNumber mobileNumber, 
-        MobileNumber alternativeContactNumber, string passwordHash, DateTime createdAt, bool isActive)
+    private User(UserContract contract)
     {
-        Id = id;
-        FullName = fullName;
-        Email = email;
-        MobileNumber = mobileNumber;
-        AlternativeContactNumber = alternativeContactNumber;
-        PasswordHash = passwordHash;
-        CreatedAt = createdAt;
-        IsActive = isActive;
+        Id = contract.Id;
+        FullName = contract.FullName;
+        Email = contract.Email;
+        MobileNumber = contract.MobileNumber;
+        AlternativeContactNumber = contract.AlternativeContactNumber;
+        PasswordHash = contract.PasswordHash;
+        CreatedAt = contract.CreatedAt;
+        IsActive = contract.IsActive;
     }
 
-    public void Create(GenericId id, FullName fullName, Email email, MobileNumber mobileNumber, 
-        MobileNumber contactNUmber, string passwordHash, DateTime createdAt)
+    public void Create(UserCreateContract contract)
     {
-        Id = id;
-        FullName = fullName;
-        Email = email;
-        MobileNumber = mobileNumber;
-        AlternativeContactNumber = alternativeContactNumber;
-        PasswordHash = passwordHash;
-        CreatedAt = createdAt;
+        Id = contract.Id;
+        FullName = contract.FullName;
+        Email = contract.Email;
+        MobileNumber = contract.MobileNumber;
+        AlternativeContactNumber = contract.AlternativeContactNumber;
+        PasswordHash = contract.PasswordHash;
+        CreatedAt = contract.CreatedAt;
         IsActive = true;
     }
 
-    public void Update(FullName fullName, Email email, MobileNumber mobileNumber, MobileNumber contactNUmber)
+    public void Update(UpdateCreateContract contract)
     {
-        Id = id;
-        FullName = fullName;
-        Email = email;
-        MobileNumber = mobileNumber;
-        AlternativeContactNumber = alternativeContactNumber;
-        CreatedAt = createdAt;
+        FullName = contract.FullName;
+        Email = contract.Email;
+        MobileNumber = contract.MobileNumber;
+        AlternativeContactNumber = contract.AlternativeContactNumber;
+    }
+    
+    public void ChangePassword(string newPasswordHash)
+    {
+        PasswordHash = newPasswordHash;
     }
 
     public void Activate()

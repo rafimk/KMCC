@@ -18,7 +18,7 @@ public class State
         CreatedAt = createdAt;
     }
 
-    private State()
+    public State()
     {
     }
 

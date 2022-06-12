@@ -1,4 +1,6 @@
-namespace MMD.Domain.ValueObjects;
+using System;
+
+namespace MMS.Domain.ValueObjects;
 
 public sealed record Date
 {

@@ -3,12 +3,12 @@ using System.Threading.Tasks;
 using MMS.Domain.Entities.Memberships.Professions;
 using MMS.Domain.ValueObjects;
 
-namespace MMS.Domain.Repositories.Nationalities;
+namespace MMS.Domain.Repositories.Memberships.Professions;
 
 public interface IProfessionRepository
 {
-    Task<Profession> GetAsync(GenericId id);
-    Task<IEnumerable<Profession>> GetAllAsync();
+    Task<Profession> GetByIdAsync(GenericId id);
+    Task<IEnumerable<Profession>> GetAsync();
     Task AddAsync(Profession profession);
     Task UpdateAsync(Profession profession);
     Task DeleteAsync(GenericId id);

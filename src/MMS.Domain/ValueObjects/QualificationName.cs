@@ -6,7 +6,7 @@ public record QualificationName
 {
     public string Value { get; }
 
-    public StateName(string value)
+    public QualificationName(string value)
     {
         if (string.IsNullOrWhiteSpace(value))
         {

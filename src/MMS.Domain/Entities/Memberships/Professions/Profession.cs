@@ -18,7 +18,7 @@ public class Profession
         CreatedAt = createdAt;
     }
 
-    private Profession()
+    public Profession()
     {
     }
     

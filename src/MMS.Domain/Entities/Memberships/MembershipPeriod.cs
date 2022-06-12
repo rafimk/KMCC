@@ -1,5 +1,4 @@
 using System;
-using MMD.Domain.ValueObjects;
 using MMS.Domain.ValueObjects;
 
 namespace MMS.Domain.Entities.Memberships;
@@ -24,11 +23,11 @@ public class MembershipPeriod
         CreatedAt = createdAt;
     }
 
-    private MembershipPeriod()
+    public MembershipPeriod()
     {
     }
 
-    public void Create(GenericId id, Date start, Date end, Date registrationUntil, bool isActive, DateTime createdAt)
+    public void Create(GenericId id, Date start, Date end, Date registrationUntil, DateTime createdAt)
     {
         Id = id;
         Start = start;
@@ -45,7 +44,12 @@ public class MembershipPeriod
         RegistrationUntil = registrationUntil;
     }
     
-    public void InActive()
+    public void Activate()
+    {
+        IsActive = true;
+    }
+
+    public void Deactivate()
     {
         IsActive = false;
     }

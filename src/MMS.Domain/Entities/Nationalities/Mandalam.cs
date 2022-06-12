@@ -21,7 +21,7 @@ public class Mandalam
         CreatedAt = createdAt;
     }
 
-    private Mandalam()
+    public Mandalam()
     {
     }
 

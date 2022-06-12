@@ -7,10 +7,9 @@ namespace MMS.Domain.Repositories.Nationalities;
 
 public interface IPanchayatRepository
 {
-    Task<Panchayat> GetAsync(GenericId id);
-    Task<IEnumerable<Panchayat>> GetByMandalamAllAsync();
-    Task<IEnumerable<Panchayat>> GetAllAsync();
+    Task<Panchayat> GetByIdAsync(GenericId id);
+    Task<IEnumerable<Panchayat>> GetByMandalamIdAllAsync(GenericId mandalamId);
+    Task<IEnumerable<Panchayat>> GetAsync();
     Task AddAsync(Panchayat panchayat);
     Task UpdateAsync(Panchayat panchayat);
-    Task DeleteAsync(GenericId id);
 }

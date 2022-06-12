@@ -16,23 +16,23 @@ public record MobileNumber
 
         if (!ValidateMobileNumber(value))
         {
-            throw new InvalidateMobileNumberException();
+            throw new InvalidMobileNumberException();
         }
         
         Value = value;
     }
     
-    private bool ValidateMobileNumber(string email)  
+    private bool ValidateMobileNumber(string mobileNumber)  
     {  
         Regex regex = new Regex(@"^([\+]?33[-]?|[0])?[1-9][0-9]{8}$");  
-        Match match = regex.Match(email); 
+        Match match = regex.Match(mobileNumber); 
         
         return match.Success; 
     }  
 
-    public static implicit operator string(MobileNumber name)
-        => name.Value;
+    public static implicit operator string(MobileNumber mobileNumber)
+        => mobileNumber.Value;
     
-    public static implicit operator MobileNumber(string name)
-        => new(name);
+    public static implicit operator MobileNumber(string mobileNumber)
+        => new(mobileNumber);
 }

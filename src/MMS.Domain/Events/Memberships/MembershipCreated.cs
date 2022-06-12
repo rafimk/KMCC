@@ -1,8 +1,11 @@
-using MMS.Domain.Entities;
+using MMS.Domain.Consts;
+using MMS.Domain.Entities.Memberships.Professions;
+using MMS.Domain.Entities.Memberships.Qualifications;
+using MMS.Domain.Entities.Nationalities;
 using MMS.Domain.ValueObjects;
 using MMS.Shared.Abstractions.Domain;
 
-namespace MMS.Domain.Events.Users
+namespace MMS.Domain.Events.Memberships
 {
     public record MembershipCreated() : IDomainEvent
     {
@@ -17,9 +20,9 @@ namespace MMS.Domain.Events.Users
         public Email Email { get; set; }
         public PassportNumber PassportNumber {get; set;}
         public Date PassportExpiry {get; set;}
-        public GenericId ProfessionId {get; et;}
+        public GenericId ProfessionId {get; set;}
         public Profession Profession {get; set;}
-        public GenericId QualificationId {get; set};
+        public GenericId QualificationId {get; set; }
         public Qualification Qualification {get; set;}
         public BloodGroup BloodGroup {get; set;}
         public string HouseName {get; set;}

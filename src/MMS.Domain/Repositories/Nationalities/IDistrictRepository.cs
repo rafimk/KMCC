@@ -7,9 +7,8 @@ namespace MMS.Domain.Repositories.Nationalities;
 
 public interface IDistrictRepository
 {
-    Task<District> GetAsync(GenericId id);
-    Task<IEnumerable<District>> GetAllAsync();
+    Task<District> GetByIdAsync(GenericId id);
+    Task<IEnumerable<District>> GetAsync();
     Task AddAsync(District district);
     Task UpdateAsync(District district);
-    Task DeleteAsync(GenericId id);
 }

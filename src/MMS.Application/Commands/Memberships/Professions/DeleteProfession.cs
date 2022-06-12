@@ -1,7 +1,7 @@
 using System;
 using MMS.Shared.Abstractions.Commands;
 
-namespace MMS.Application.Commands.Professions;
+namespace MMS.Application.Commands.Memberships.Professions;
 
 public record DeleteProfession() : ICommand
 {

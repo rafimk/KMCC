@@ -1,12 +1,9 @@
-using MMS.Domain.Abstractions;
-using MMS.Domain.Entities;
 using MMS.Domain.ValueObjects;
 
-namespace MMS.Domain.Policies;
+namespace MMS.Domain.Policies.Users;
 
 internal sealed class CentralCommitteeUserCreatePolicy : IUserCreatePolicy
 {
-   
     public bool CanBeApplied(UserRole currentUserRole)
         => currentUserRole == UserRole.CentralCommitteeAdmin;
 

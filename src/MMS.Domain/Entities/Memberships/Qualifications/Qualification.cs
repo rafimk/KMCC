@@ -18,7 +18,7 @@ public class Qualification
         CreatedAt = createdAt;
     }
 
-    private Qualification()
+    public Qualification()
     {
     }
     

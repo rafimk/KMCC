@@ -3,12 +3,12 @@ using System.Threading.Tasks;
 using MMS.Domain.Entities.Memberships.Qualifications;
 using MMS.Domain.ValueObjects;
 
-namespace MMS.Domain.Repositories.Nationalities;
+namespace MMS.Domain.Repositories.Memberships.Qualifications;
 
 public interface IQualificationRepository
 {
-    Task<Qualification> GetAsync(GenericId id);
-    Task<IEnumerable<Qualification>> GetAllAsync();
+    Task<Qualification> GetByIdAsync(GenericId id);
+    Task<IEnumerable<Qualification>> GetAsync();
     Task AddAsync(Qualification qualification);
     Task UpdateAsync(Qualification qualification);
     Task DeleteAsync(GenericId id);

@@ -1,8 +1,8 @@
-using System;
-using MMS.Application.DTO;
+using System.Collections.Generic;
+using MMS.Application.DTO.Nationalities.Districts;
 using MMS.Shared.Abstractions.Queries;
 
-namespace MMS.Application.Queries.Nationalities.Areas;
+namespace MMS.Application.Queries.Nationalities.Districts;
 
 public class GetAllDistricts : IQuery<IEnumerable<DistrictDto>>
 {

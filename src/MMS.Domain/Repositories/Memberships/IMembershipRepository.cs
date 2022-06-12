@@ -1,18 +1,20 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
-using MMS.Domain.Entities;
+using MMS.Domain.Entities.Memberships;
 using MMS.Domain.ValueObjects;
 
-namespace MMS.Domain.Repositories.Nationalities;
+namespace MMS.Domain.Repositories.Memberships;
 
 public interface IMembershipRepository
 {
-    Task<Membership> GetAsync(GenericId id);
+    Task<Membership> GetByIdAsync(GenericId id);
     Task<Membership> GetByMembershipIdAsync(MembershipId membershipId);
-    Task<IEnumerable<Membership>> GetAllAsync();
+    Task<IEnumerable<Membership>> GetAsync();
     Task<IEnumerable<Membership>> GetActiveAsync();
-    Task<IEnumerable<Membership>> GetByStateAsync(GenericId stateId);
-    Task<IEnumerable<Membership>> GetByMandalamAsync(GenericId mandalamId);
+    Task<IEnumerable<Membership>> GetByAreaIdAsync(GenericId areaId);
+    Task<IEnumerable<Membership>> GetByMandalamIdAsync(GenericId mandalamId);
     Task AddAsync(Membership membership);
     Task UpdateAsync(Membership membership);
-    Task DeleteAsync(GenericId id);
+    Task ActivateAsync(GenericId id);
+    Task DeactivateAsync(GenericId id);
 }

@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Entities\Members" />
     <Folder Include="Policies\Members" />
     <Folder Include="Policies\Users" />
     <Folder Include="Repositories" />

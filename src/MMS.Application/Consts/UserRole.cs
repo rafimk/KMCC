@@ -1,4 +1,4 @@
-﻿namespace MMS.Domain.Consts;
+﻿namespace MMS.Application.Consts;
 
 public enum UserRole
 {

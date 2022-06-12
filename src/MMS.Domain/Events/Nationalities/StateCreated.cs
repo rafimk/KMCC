@@ -4,5 +4,5 @@ using MMS.Shared.Abstractions.Domain;
 
 namespace MMS.Domain.Events.Users
 {
-    public record PanchayatCreated(GenericId Id, StateName Name) : IDomainEvent;
+    public record StateCreated(GenericId Id, StateName Name) : IDomainEvent;
 }

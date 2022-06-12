@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MMS.Domain\PackIT.Domain.csproj" />
-    <ProjectReference Include="..\MMS.Shared\PackIT.Shared.csproj" />
+    <ProjectReference Include="..\MMS.Domain\MMS.Domain.csproj" />
+    <ProjectReference Include="..\MMS.Shared\MMS.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,6 @@
-using MMS.Domain.Consts;
+using MMS.Domain.ValueObjects;
 
-namespace MMS.Domain.Policies;
+namespace MMS.Domain.Policies.Users;
 
 public interface IUserCreatePolicy
 {

@@ -18,7 +18,7 @@ public class District
         CreatedAt = createdAt;
     }
 
-    private District()
+    public District()
     {
     }
 

@@ -1,7 +1,6 @@
-using System;
 using MMS.Shared.Abstractions.Commands;
 
-namespace MMS.Application.Commands;
+namespace MMS.Application.Commands.Users;
 
 public record CreateUser() : ICommand
 {
@@ -9,5 +8,5 @@ public record CreateUser() : ICommand
     public string Email { get; set; }
     public string MobileNumber { get; set; }
     public string AlternativeContactNumber { get; set; }
-    public UserRole Role { get; set; }
+    public int Role { get; set; }
 }

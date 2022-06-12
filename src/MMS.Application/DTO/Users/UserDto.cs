@@ -5,7 +5,7 @@ using MMS.Domain.ValueObjects;
 
 namespace MMS.Application.DTO.Users;
 
-public class UsersDto
+public class UserDto
 {
     public Guid Id { get; private set; }
     public string FullName { get; private set; }

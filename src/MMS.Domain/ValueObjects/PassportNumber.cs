@@ -6,7 +6,7 @@ public record PassportNumber
 {
     public string Value { get; }
 
-    public EmiratesIdNumber(string value)
+    public PassportNumber(string value)
     {
         if (string.IsNullOrWhiteSpace(value))
         {

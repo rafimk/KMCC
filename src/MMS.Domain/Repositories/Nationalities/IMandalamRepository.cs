@@ -7,10 +7,9 @@ namespace MMS.Domain.Repositories.Nationalities;
 
 public interface IMandalamRepository
 {
-    Task<Mandalam> GetAsync(GenericId id);
-    Task<IEnumerable<Mandalam>> GetByDistrictAsync(GenericId districtId);
-    Task<IEnumerable<Mandalam>> GetAllAsync();
+    Task<Mandalam> GetByIdAsync(GenericId id);
+    Task<IEnumerable<Mandalam>> GetByDistrictIdAsync(GenericId districtId);
+    Task<IEnumerable<Mandalam>> GetAsync();
     Task AddAsync(Mandalam mandalam);
     Task UpdateAsync(Mandalam mandalam);
-    Task DeleteAsync(GenericId id);
 }

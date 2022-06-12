@@ -23,7 +23,7 @@ public class Area
         CreatedAt = createdAt;
     }
 
-    private Area()
+    public Area()
     {
     }
 

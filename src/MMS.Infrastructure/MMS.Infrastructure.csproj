@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.*" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.*" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MMS.Application\MMS.Application.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="EF\Migrations" />
+      <Folder Include="EF\Models" />
+      <Folder Include="EF\Queries" />
+      <Folder Include="EF\Services" />
+    </ItemGroup>
+
+</Project>

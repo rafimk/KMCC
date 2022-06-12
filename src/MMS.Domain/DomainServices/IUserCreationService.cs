@@ -1,5 +1,4 @@
-
-using MMS.Domain.Entities;
+using System;
 using MMS.Domain.ValueObjects;
 
 namespace MMS.Domain.DomainServices;
@@ -7,5 +6,5 @@ namespace MMS.Domain.DomainServices;
 public interface IUserCreationService
 {
     void CreateUser(GenericId id, FullName fullName, Email email, MobileNumber mobileNumber, 
-        MobileNumber contactNUmber, string passwordHash, DateTime createdAt);
+        MobileNumber alternativeContactNumber, string passwordHash, DateTime createdAt);
 }

@@ -6,7 +6,7 @@ public record ProfessionName
 {
     public string Value { get; }
 
-    public StateName(string value)
+    public ProfessionName(string value)
     {
         if (string.IsNullOrWhiteSpace(value))
         {

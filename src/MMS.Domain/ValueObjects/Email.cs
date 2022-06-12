@@ -16,7 +16,7 @@ public record Email
 
         if (!ValidateEmail(value))
         {
-            throw new InvalidateEmailException();
+            throw new InvalidEmailException();
         }
         
         Value = value;

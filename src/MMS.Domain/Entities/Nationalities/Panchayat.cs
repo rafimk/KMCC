@@ -25,7 +25,7 @@ public class Panchayat
         CreatedAt = createdAt;
     }
 
-    private Panchayat()
+    public Panchayat()
     {
     }
 
