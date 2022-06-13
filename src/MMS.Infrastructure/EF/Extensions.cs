@@ -38,6 +38,7 @@ internal static class Extensions
         var options = configuration.GetOptions<PostgresOptions>("Postgres");
         services.AddDbContext<MMSDbContext>(ctx => 
             ctx.UseNpgsql(options.ConnectionString));
+  
         return services;
     }
 }
